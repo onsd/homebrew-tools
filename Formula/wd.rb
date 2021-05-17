@@ -5,20 +5,24 @@
 class Wd < Formula
   desc ""
   homepage "https://github.com/onsd/wd"
-  version "1.2.1"
+  version "1.4.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/onsd/wd/releases/download/v1.2.1/wd_1.2.1_darwin_amd64.tar.gz"
-    sha256 "300133b9fbd97f6b39238c19669124c4314a55846f9b80264e479fa928eeaf39"
+    url "https://github.com/onsd/wd/releases/download/v1.4.0/wd_1.4.0_darwin_amd64.tar.gz"
+    sha256 "11b137e5555f29e73554db62bf5f8983f712112ab936b44a6c8234efa0725b9f"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/onsd/wd/releases/download/v1.4.0/wd_1.4.0_darwin_arm64.tar.gz"
+    sha256 "ec2beee5910b868547fbe8f0eeb6076d7aa7157069291b474f1e0dfe7efe92df"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/onsd/wd/releases/download/v1.2.1/wd_1.2.1_linux_amd64.tar.gz"
-    sha256 "3bc5c6312d4331f975faa6414eebc3ccd171b41f718669dcd3296c1a1e8895b8"
+    url "https://github.com/onsd/wd/releases/download/v1.4.0/wd_1.4.0_linux_amd64.tar.gz"
+    sha256 "a8eaf879d972759eedab5eb18386b22a67c0673749526adda64a4be05ae408e6"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/onsd/wd/releases/download/v1.2.1/wd_1.2.1_linux_arm64.tar.gz"
-    sha256 "95a78a7fb0a4db177d1415bd10856cfe689fdab89db2e19576d37873147a654d"
+    url "https://github.com/onsd/wd/releases/download/v1.4.0/wd_1.4.0_linux_arm64.tar.gz"
+    sha256 "3abecb815ef26bb6afed77d7149bca85899c3b2ffd0a06fe0a70a2d6d57d0bec"
   end
 
   def install
